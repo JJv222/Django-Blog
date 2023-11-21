@@ -1,0 +1,26 @@
+<!-- FILEPATH: /home/kuba/django/myblog/Posts/templates/Posts/index.html -->
+
+{% load static tailwind_tags %}
+
+<!DOCTYPE html>
+<html>
+<head>
+    {% tailwind_css %}
+    <title>Blog</title>
+</head>
+<body>
+    <!-- Sekcja wyświetlająca posty -->
+    <div>
+        <h2>Posty</h2>
+        {% for post in posts%}
+          <h3>{{post.title}}</h3>
+          <p>{{post.body}}</p>
+          <p>{{post.create_date}}</p>
+          <p> {{post.author}}</p>
+          {% endfor %}
+    </div>
+
+    <!-- Formularz dodawania nowego postu -->
+    <a href="{% url 'posts:add_new_post' %}">Dodaj nowy post</a>
+</body>
+</html>
