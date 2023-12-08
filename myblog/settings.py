@@ -30,6 +30,9 @@ ALLOWED_HOSTS = []
 
 # Application definition
 
+# Crispy template pack
+CRISPY_TEMPLATE_PACK="bootstrap4"
+
 INSTALLED_APPS = [
     'django.contrib.admin',
     'django.contrib.auth',
@@ -38,7 +41,8 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'Posts.apps.PostsConfig',
-
+    'Register_and_login.apps.RegisterAndLoginConfig',
+    'crispy_forms',
     'tailwind',
     'theme', 
     'django_browser_reload',
